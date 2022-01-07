@@ -7,9 +7,14 @@ Posterior a esto se creo el repositorio de GIT.
 
 Se creo la base de Datos de MySQL, usuario "root" contraseña "" Nombre "digitalifeang".
 
-Fin de la Tarea 1.
+Se requiere Migrar la Base de Datos:
+    php artisan migrate
+    php artisan db:seed
 
-Procedo a enfocarme a la Base de datos, para poder iniciar con el punto.
+Con esto ya vamos a poder ingresar a la URL public/ de nuestro proyecto.
+
+Iniciando el Login se usuan las credenciales, Correo "admin@digitalife.com.mx" y contraseña "digitalife"
+
 
 
 
@@ -38,6 +43,11 @@ Lineas de Codigo para DB:
         $table->string('email')->unique();
         $table->string('password');
         $table->timestamps();
+
+
+Seeder
+    Se creo el primer Registro, con el usuario y contraseña marcado en el documento.
+    Como practica quiero agregar variso productos, esto tambien ayuda a poder hacer pruebas con las tablas mas adelante.
 
 Extenciones VSC:
     ->PHP Intelephense
