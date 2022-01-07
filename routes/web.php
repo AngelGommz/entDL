@@ -17,8 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class);
 
-Route::get('productos/', [ProductosController::class, 'index']);
+// Route::post('login/', function ($id) {
+//     return $_POST;
+// });
 
-Route::get('productos/alta', [ProductosController::class, 'create']);
+Route::get('productos/', [ProductosController::class, 'index'])->name('u_prod.index');
 
-Route::get('productos/{producto}', [ProductosController::class, 'show']);
+Route::get('productos/alta', [ProductosController::class, 'create'])->name('u_prod.alta');
+
+Route::get('productos/{producto}', [ProductosController::class, 'show'])->name('u_prod.show');
