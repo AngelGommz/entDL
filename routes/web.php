@@ -17,11 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class);
 
-// Route::post('login/', function ($id) {
-//     return $_POST;
-// });
-
 Route::get('productos/', [ProductosController::class, 'index'])->name('u_prod.index');
+
+Route::post('productos/',[ProductosController::class, 'validate_pws'])->name('u_prod.validate');
 
 Route::get('productos/alta', [ProductosController::class, 'create'])->name('u_prod.alta');
 

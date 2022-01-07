@@ -5,7 +5,8 @@
 @section('contenido')
     <div class="jumbotron mt-5">
         <h1 class="display-4 text-center">DIGITALIFE</h1>
-        <form action="login" method="post">
+        <form action="{{route('u_prod.validate')}}" method="post">
+            @csrf
             <div class="col-md-6 offset-md-3 row">
                 <div class="col-md-6">
                     <label for="usuario">Usuario</label>
