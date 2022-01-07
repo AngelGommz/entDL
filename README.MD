@@ -14,6 +14,20 @@ Se requiere Migrar la Base de Datos:
 Con esto ya vamos a poder ingresar a la URL public/ de nuestro proyecto.
 
 Iniciando el Login se usuan las credenciales, Correo "admin@digitalife.com.mx" y contraseña "digitalife"
+    *No funciona, Where a la tabla me estaba ocacionando probelmas, es la primera vez que intento esta forma.
+    *Busque la manera de meterle un metodo HAST a la contraseña pero no encontre algo que me funcionara en Laravel de manera nativa. debe de existir.
+
+Ya iniciada la sesion. pasamos a la tabla de productos.
+    *se pueden visualizar todos los productos y les puse la paginacion nativa.
+    *Cree estilos espesificos para los botones de la paginacion que si no se ven muy mal.
+    *Acostumbro poner modals para poder hacer la edicion alta y demas de elementos en vez de hacer nutavas paginas.
+    *Se tienen paginas extras porque crei que las necesitaria pero al final no creo que sean necesarias.
+    *falto el boton de Alta la verdad es que no me dio tiempo de crear esta parte.
+
+
+
+De ante mano muchas gracias por la oportunidad de este examen, debo decir que nunca habia explotado laravel de esta manera.
+
 
 
 
