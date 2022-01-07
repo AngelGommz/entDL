@@ -19,6 +19,12 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            .w-5{
+                height: 27px;
+            }
+            .leading-5{
+                padding-top: 20px;
+            }
         </style>
     </head>
     <body class="bg-secondary">
