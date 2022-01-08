@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\DB_Products;
 use App\Models\Product;
 use Illuminate\Database\Seeder;
 
@@ -14,7 +15,7 @@ class ProductsSeed extends Seeder
      */
     public function run()
     {
-        $producto = new Product();
+        $producto = new DB_Products();
 
         $producto->name = 'PC';
         $producto->price = '7500.50';
@@ -22,7 +23,7 @@ class ProductsSeed extends Seeder
 
         $producto->save();
 
-        $producto2 = new Product();
+        $producto2 = new DB_Products();
 
         $producto2->name = 'LapTop';
         $producto2->price = '15500.50';
@@ -30,7 +31,7 @@ class ProductsSeed extends Seeder
 
         $producto2->save();
 
-        $producto3 = new Product();
+        $producto3 = new DB_Products();
 
         $producto3->name = 'TV';
         $producto3->price = '12200.20';
@@ -38,7 +39,7 @@ class ProductsSeed extends Seeder
 
         $producto3->save();
 
-        $producto4 = new Product();
+        $producto4 = new DB_Products();
 
         $producto4->name = 'Table';
         $producto4->price = '800.60';
@@ -46,7 +47,7 @@ class ProductsSeed extends Seeder
 
         $producto4->save();
 
-        $producto5 = new Product();
+        $producto5 = new DB_Products();
 
         $producto5->name = 'Teclado';
         $producto5->price = '150.00';
@@ -55,7 +56,7 @@ class ProductsSeed extends Seeder
         $producto5->save();
 
 
-        $producto6 = new Product();
+        $producto6 = new DB_Products();
 
         $producto6->name = 'PC';
         $producto6->price = '7500.50';
@@ -63,7 +64,7 @@ class ProductsSeed extends Seeder
 
         $producto6->save();
 
-        $producto7 = new Product();
+        $producto7 = new DB_Products();
 
         $producto7->name = 'LapTop';
         $producto7->price = '15500.50';
@@ -71,7 +72,7 @@ class ProductsSeed extends Seeder
 
         $producto7->save();
 
-        $producto8 = new Product();
+        $producto8 = new DB_Products();
 
         $producto8->name = 'TV';
         $producto8->price = '12200.20';
@@ -79,7 +80,7 @@ class ProductsSeed extends Seeder
 
         $producto8->save();
 
-        $producto9 = new Product();
+        $producto9 = new DB_Products();
 
         $producto9->name = 'Table';
         $producto9->price = '800.60';
@@ -87,7 +88,7 @@ class ProductsSeed extends Seeder
 
         $producto9->save();
 
-        $producto10 = new Product();
+        $producto10 = new DB_Products();
 
         $producto10->name = 'Teclado';
         $producto10->price = '150.00';
@@ -95,7 +96,7 @@ class ProductsSeed extends Seeder
 
         $producto10->save();
 
-        $producto11 = new Product();
+        $producto11 = new DB_Products();
 
         $producto11->name = 'PC';
         $producto11->price = '7500.50';
@@ -103,7 +104,7 @@ class ProductsSeed extends Seeder
 
         $producto11->save();
 
-        $producto12 = new Product();
+        $producto12 = new DB_Products();
 
         $producto12->name = 'LapTop';
         $producto12->price = '15500.50';
@@ -111,7 +112,7 @@ class ProductsSeed extends Seeder
 
         $producto12->save();
 
-        $producto13 = new Product();
+        $producto13 = new DB_Products();
 
         $producto13->name = 'TV';
         $producto13->price = '12200.20';
@@ -119,7 +120,7 @@ class ProductsSeed extends Seeder
 
         $producto13->save();
 
-        $producto14 = new Product();
+        $producto14 = new DB_Products();
 
         $producto14->name = 'Table';
         $producto14->price = '800.60';
@@ -127,7 +128,7 @@ class ProductsSeed extends Seeder
 
         $producto14->save();
 
-        $producto15 = new Product();
+        $producto15 = new DB_Products();
 
         $producto15->name = 'Teclado';
         $producto15->price = '150.00';
@@ -135,7 +136,7 @@ class ProductsSeed extends Seeder
 
         $producto15->save();
 
-        $producto16 = new Product();
+        $producto16 = new DB_Products();
 
         $producto16->name = 'PC';
         $producto16->price = '7500.50';
@@ -143,7 +144,7 @@ class ProductsSeed extends Seeder
 
         $producto16->save();
 
-        $producto17 = new Product();
+        $producto17 = new DB_Products();
 
         $producto17->name = 'LapTop';
         $producto17->price = '15500.50';
@@ -151,7 +152,7 @@ class ProductsSeed extends Seeder
 
         $producto17->save();
 
-        $producto18 = new Product();
+        $producto18 = new DB_Products();
 
         $producto18->name = 'TV';
         $producto18->price = '12200.20';
@@ -159,7 +160,7 @@ class ProductsSeed extends Seeder
 
         $producto18->save();
 
-        $producto19 = new Product();
+        $producto19 = new DB_Products();
 
         $producto19->name = 'Table';
         $producto19->price = '800.60';
@@ -167,7 +168,7 @@ class ProductsSeed extends Seeder
 
         $producto19->save();
 
-        $producto20 = new Product();
+        $producto20 = new DB_Products();
 
         $producto20->name = 'Teclado';
         $producto20->price = '150.00';
