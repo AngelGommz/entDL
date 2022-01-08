@@ -157,6 +157,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'frmalt_name' => 'Nombre',
+        'frmalt_price' => 'Costo',
+        'frmalt_qty' => 'Cantidad'
+    ],
 
 ];
