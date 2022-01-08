@@ -39,12 +39,25 @@ class ProductosController extends Controller
         return redirect()->route('u_prod.index'); 
     }
 
+    public function fn_delete($id_del){
+        // return $id_del;
+
+        $r_prod = DB_Products::find($id_del);
+
+        // return $r_prod;
+        $r_prod->deleted_at = date('Y-m-d g:i:s');
+
+        $r_prod->save();
+
+        return redirect()->route('u_prod.index'); 
+    }
+
     public function update(Request $f_upd){
         // return $f_upd;
         $f_upd->validate([
             'frm_name' => 'required',
             'frm_price' => 'required',
-            'frm_qty' => 'required',
+            'frm_qty' => 'required'
         ]);
 
         $r_prod = DB_Products::find($f_upd->frm_id);

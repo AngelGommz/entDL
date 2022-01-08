@@ -122,6 +122,11 @@
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m_prdo{{$d_prod['id']}}">
                                 Editar
                             </button>
+                            <a href="{{route('u_prod.fn_delete',$d_prod['id'])}}">
+                                <button type="button" class="btn btn-danger">
+                                    Eliminar
+                                </button>
+                            </a>
                         </td>
                     </tr>
                     <!-- Modal -->

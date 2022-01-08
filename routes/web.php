@@ -23,4 +23,6 @@ Route::post('productos/',[ProductosController::class, 'validate_pws'])->name('u_
 
 Route::post('productos/alta', [ProductosController::class, 'create'])->name('u_prod.alta');
 
+Route::get('productos/delete/{id_del}', [ProductosController::class, 'fn_delete'])->name('u_prod.fn_delete');
+
 Route::put('productos/update', [ProductosController::class, 'update'])->name('u_prod.update');
