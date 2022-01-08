@@ -21,6 +21,6 @@ Route::get('productos/', [ProductosController::class, 'index'])->name('u_prod.in
 
 Route::post('productos/',[ProductosController::class, 'validate_pws'])->name('u_prod.validate');
 
-Route::get('productos/alta', [ProductosController::class, 'create'])->name('u_prod.alta');
+Route::post('productos/alta', [ProductosController::class, 'create'])->name('u_prod.alta');
 
-Route::get('productos/{producto}', [ProductosController::class, 'show'])->name('u_prod.show');
+Route::put('productos/update', [ProductosController::class, 'update'])->name('u_prod.update');
