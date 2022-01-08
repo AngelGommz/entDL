@@ -29,6 +29,13 @@ class ProductosController extends Controller
 
         $r_alt->save();
 
+        // Encontre esta otra manera para poder guardar registros pero creo que no funciona bien, pendiente para despues.
+        // $r_alt = DB_Products::created([
+        //     'name' => $d_alt->frmalt_name,
+        //     'price' => $d_alt->frmalt_price,
+        //     'qty' => $d_alt->frmalt_qty
+        // ]);       
+
         return redirect()->route('u_prod.index'); 
     }
 
