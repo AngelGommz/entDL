@@ -24,6 +24,13 @@ Ya iniciada la sesion. pasamos a la tabla de productos.
     *Se tienen paginas extras porque crei que las necesitaria pero al final no creo que sean necesarias.
     *falto el boton de Alta la verdad es que no me dio tiempo de crear esta parte.
 
+En esta seccion, ya se puede dar de alta productos, se pueden editar desde un modal y se pueden Eliminar del listado.
+    *La elimininación de los registros es aparente, solo se agrega la fecha en el campo "delete_at" y teninedo este campo lleno no se mustra en el listado gracias al filtro.
+    *En el documento slicita hacerlo de manera logica, pero no estaba funcionando correctamente, por lo cual lo deje de l amanera mas sencilla.
+    *Falta poner el modal de confirmacino de Eliminacion.
+    *Se personalizaron un poco los mensajes de Validacion solo cambie el nombre de las Variables, me gusta ver los mensjaes de esa manera tambien para mantener un estandar general.
+    
+
 
 
 De ante mano muchas gracias por la oportunidad de este examen, debo decir que nunca habia explotado laravel de esta manera.
