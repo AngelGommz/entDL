@@ -108,6 +108,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Costo</th>
                     <th scope="col">Cantidad</th>
+                    <th scope="col">Fecha Alta</th>
                     <th scope="col">Acción</th>
                 </tr>
             </thead>
@@ -118,6 +119,7 @@
                         <td>{{$d_prod['name']}}</td>
                         <td>${{$d_prod['price']}}</td>
                         <td>{{$d_prod['qty']}}</td>
+                        <td>{{date("Y/m/d", strtotime($d_prod['created_at'])) }}</td>
                         <td>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m_prdo{{$d_prod['id']}}">
                                 Editar
