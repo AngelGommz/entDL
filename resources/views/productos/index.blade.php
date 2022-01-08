@@ -3,9 +3,52 @@
 @section('titulo','Productos')
 
 @section('contenido')
-    <div class="col-md-8 offset-md-2 jumbotron mt-5">
-        <h1 class="text-center">PRODUCTOS</h1>
-        <table class="table">
+    <div class="col-md-10 offset-md-1 jumbotron mt-5 row">
+        <div class="col-md-8">
+            <h1 class="text-center">PRODUCTOS</h1>
+        </div>
+        <div class="col-md-4">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#exampleModal">
+                ALTA PRODUCTOS
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Alta de productos.</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form method="POST" action="{{route('u_prod.alta')}}">
+                            <div class="modal-body row">
+                                @csrf
+                                <div class="form-group col-md-4">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" class="form-control" id="frm_name" name="frm_name">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="name">Costo</label>
+                                    <input type="number" class="form-control" id="frm_price" name="frm_price">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="name">Cantidad</label>
+                                    <input type="number" class="form-control" id="frm_qty" name="frm_qty">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table mt-5">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -38,24 +81,29 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <form method="post" action="">
+                                <form method="post" action="{{route('u_prod.update')}}">
+                                    @csrf
+                                    @method('put')
                                     <div class="modal-body row">
+                                        <div class="d-none">
+                                            <input type="text" class="form-control" id="frm_id" name="frm_id" value="{{$d_prod['id']}}">
+                                        </div>
                                         <div class="form-group col-md-4">
                                             <label for="name">Nombre</label>
-                                            <input type="text" class="form-control" id="name" name="name" value="{{$d_prod['name']}}">
+                                            <input type="text" class="form-control" id="frm_name" name="frm_name" value="{{$d_prod['name']}}">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="name">Costo</label>
-                                            <input type="text" class="form-control" id="costo" name="costo" value="{{$d_prod['price']}}">
+                                            <input type="text" class="form-control" id="frm_price" name="frm_price" value="{{$d_prod['price']}}">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="name">Cantidad</label>
-                                            <input type="text" class="form-control" id="cantidad" name="cantidad" value="{{$d_prod['qty']}}">
+                                            <input type="text" class="form-control" id="frm_qty" name="frm_qty" value="{{$d_prod['qty']}}">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
-                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
                                     </div>
                                 </form>                                
                             </div>
