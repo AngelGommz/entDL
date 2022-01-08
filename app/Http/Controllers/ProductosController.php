@@ -7,19 +7,25 @@ use Illuminate\Http\Request;
 
 class ProductosController extends Controller
 {
-    public function index()
-    {   
+    public function index(){   
         $c_prod = DB_Products::where('deleted_at', NULL)->orderby('id','desc')->paginate();
         return view('productos.index', compact('c_prod'));        
     }
 
     public function create(Request $d_alt){
         // return $d_alt;
+
+        $d_alt->validate([
+            'frmalt_name' => 'required',
+            'frmalt_price' => 'required',
+            'frmalt_qty' => 'required',
+        ]);
+
         $r_alt = new DB_Products();
 
-        $r_alt->name = $d_alt->frm_name;
-        $r_alt->price = $d_alt->frm_price;
-        $r_alt->qty = $d_alt->frm_qty;
+        $r_alt->name = $d_alt->frmalt_name;
+        $r_alt->price = $d_alt->frmalt_price;
+        $r_alt->qty = $d_alt->frmalt_qty;
 
         $r_alt->save();
 

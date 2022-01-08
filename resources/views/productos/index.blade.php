@@ -28,15 +28,15 @@
                                 @csrf
                                 <div class="form-group col-md-4">
                                     <label for="name">Nombre</label>
-                                    <input type="text" class="form-control" id="frm_name" name="frm_name">
+                                    <input type="text" class="form-control" id="frmalt_name" name="frmalt_name">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="name">Costo</label>
-                                    <input type="number" class="form-control" id="frm_price" name="frm_price">
+                                    <input type="number" class="form-control" id="frmalt_price" name="frmalt_price">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="name">Cantidad</label>
-                                    <input type="number" class="form-control" id="frm_qty" name="frm_qty">
+                                    <input type="number" class="form-control" id="frmalt_qty" name="frmalt_qty">
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -47,6 +47,32 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-md-12">
+            @error('frmalt_name')
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error Ingreso de Datos!!</strong> Lo sentimos pero no se pudo agregar el registro por falta del Nombre.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @enderror
+            @error('frmalt_price')
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error Ingreso de Datos!!</strong> Lo sentimos pero no se pudo agregar el registro por falta del Costo.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @enderror
+            @error('frmalt_qty')
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error Ingreso de Datos!!</strong> Lo sentimos pero no se pudo agregar el registro por falta de la Cantidad.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @enderror
         </div>
         <table class="table mt-5">
             <thead>
