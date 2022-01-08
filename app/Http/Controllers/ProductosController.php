@@ -33,8 +33,13 @@ class ProductosController extends Controller
     }
 
     public function update(Request $f_upd){
-
         // return $f_upd;
+        $f_upd->validate([
+            'frm_name' => 'required',
+            'frm_price' => 'required',
+            'frm_qty' => 'required',
+        ]);
+
         $r_prod = DB_Products::find($f_upd->frm_id);
 
         $r_prod->name = $f_upd->frm_name;

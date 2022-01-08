@@ -160,7 +160,10 @@ return [
     'attributes' => [
         'frmalt_name' => 'Nombre',
         'frmalt_price' => 'Costo',
-        'frmalt_qty' => 'Cantidad'
+        'frmalt_qty' => 'Cantidad',
+        'frm_name' => 'Nombre',
+        'frm_price' => 'Costo',
+        'frm_qty' => 'Cantidad'
     ],
 
 ];
