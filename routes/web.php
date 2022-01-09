@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductosController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class)->name('inicio.home');
+
+Route::post('/login', function(){
+    $d_credenciales = request();
+    // return $d_credenciales;
+
+    if(Auth::attempt(['email' => $d_credenciales->usuario, 'password' => $d_credenciales->contrasena])){
+        request()->session()->regenerate();
+
+        return redirect()->route('u_prod.index');
+    }else{
+        return redirect()->route('inicio.home');
+    }
+    
+})->name('inicio.login');
+
+Route::get('/logout', function(){
+    Auth::logout();
+    return redirect()->route('inicio.home');
+})->name('inicio.logout');
 
 Route::get('productos/', [ProductosController::class, 'index'])->name('u_prod.index');
 

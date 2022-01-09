@@ -5,7 +5,7 @@
 @section('contenido')
     <div class="jumbotron mt-5">
         <h1 class="display-4 text-center">DIGITALIFE</h1>
-        <form action="{{route('u_prod.validate')}}" method="post">
+        <form action="{{route('inicio.login')}}" method="post">
             @csrf
             <div class="col-md-6 offset-md-3 row">
                 <x-inputdl columna="6" nombre='usuario' texto='Usuario' type='text' />
