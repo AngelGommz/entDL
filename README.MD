@@ -30,6 +30,7 @@ En esta seccion, ya se puede dar de alta productos, se pueden editar desde un mo
     *Falta poner el modal de confirmacino de Eliminacion.
     *Se personalizaron un poco los mensajes de Validacion solo cambie el nombre de las Variables, me gusta ver los mensjaes de esa manera tambien para mantener un estandar general.
     
+Se cuenta con un Barra de Navegacion superir con la cual se peude navegar por los productos los contactos o realizar el Logout.
 
 
 
