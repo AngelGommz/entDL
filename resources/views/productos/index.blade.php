@@ -26,18 +26,9 @@
                         <form method="POST" action="{{route('u_prod.alta')}}">
                             <div class="modal-body row">
                                 @csrf
-                                <div class="form-group col-md-4">
-                                    <label for="name">Nombre</label>
-                                    <input type="text" class="form-control" id="frmalt_name" name="frmalt_name" value="{{old('frmalt_name')}}">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="name">Costo</label>
-                                    <input type="number" class="form-control" id="frmalt_price" name="frmalt_price" value="{{old('frmalt_price')}}">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="name">Cantidad</label>
-                                    <input type="number" class="form-control" id="frmalt_qty" name="frmalt_qty" value="{{old('frmalt_qty')}}">
-                                </div>
+                                <x-inputdl columna="4" nombre='frmalt_name' texto='Nombre' type='text' />
+                                <x-inputdl columna="4" nombre='frmalt_price' texto='Costo' type='number' />
+                                <x-inputdl columna="4" nombre='frmalt_qty' texto='Cantidad' type='number' />
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -51,54 +42,24 @@
         <div class="col-md-12">
             {{-- Errores para Alta --}}
             @error('frmalt_name')
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Error Ingreso de Datos!!</strong> {{$message}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <x-alertadl color="danger" texto="Error Ingreso de Datos!!" mensaje="{{$message}}" />
             @enderror
             @error('frmalt_price')
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Error Ingreso de Datos!!</strong> {{$message}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <x-alertadl color="danger" texto="Error Ingreso de Datos!!" mensaje="{{$message}}" />
             @enderror
             @error('frmalt_qty')
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Error Ingreso de Datos!!</strong> {{$message}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <x-alertadl color="danger" texto="Error Ingreso de Datos!!" mensaje="{{$message}}" />
             @enderror
 
             {{-- Errores para Edición --}}
             @error('frm_name')
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Error Edición de Datos!!</strong> {{$message}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <x-alertadl color="danger" texto="Error Edición de Datos!!" mensaje="{{$message}}" />
             @enderror
             @error('frm_price')
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Error Edición de Datos!!</strong> {{$message}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <x-alertadl color="danger" texto="Error Edición de Datos!!" mensaje="{{$message}}" />
             @enderror
             @error('frm_qty')
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Error Edición de Datos!!</strong> {{$message}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <x-alertadl color="danger" texto="Error Edición de Datos!!" mensaje="{{$message}}" />
             @enderror
         </div>
         <table class="table mt-5">
@@ -148,18 +109,9 @@
                                         <div class="d-none">
                                             <input type="text" class="form-control" id="frm_id" name="frm_id" value="{{$d_prod['id']}}">
                                         </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="name">Nombre</label>
-                                            <input type="text" class="form-control" id="frm_name" name="frm_name" value="{{$d_prod['name']}}">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="name">Costo</label>
-                                            <input type="text" class="form-control" id="frm_price" name="frm_price" value="{{$d_prod['price']}}">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="name">Cantidad</label>
-                                            <input type="text" class="form-control" id="frm_qty" name="frm_qty" value="{{$d_prod['qty']}}">
-                                        </div>
+                                        <x-inputdl columna="4" nombre='frm_name' texto='Nombre' type='text' valor="{{$d_prod['name']}}" />
+                                        <x-inputdl columna="4" nombre='frm_price' texto='Costo' type='number' valor="{{$d_prod['price']}}" />
+                                        <x-inputdl columna="4" nombre='frm_qty' texto='Cantidad' type='number' valor="{{$d_prod['qty']}}" />
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>

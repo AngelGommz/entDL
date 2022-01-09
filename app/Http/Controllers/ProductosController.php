@@ -72,12 +72,6 @@ class ProductosController extends Controller
     }
 
     public function validate_pws(Request $credenciales){
-        // $s_usuario = new User();
-
-        // $d_usuario = User::where('email', $credenciales->usuario);
-
-        // return $d_usuario;
-        $c_prod = DB_Products::paginate();
-        return view('productos.index', compact('c_prod')); 
+        return redirect()->route('u_prod.index');
     }
 }

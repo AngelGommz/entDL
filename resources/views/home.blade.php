@@ -8,14 +8,8 @@
         <form action="{{route('u_prod.validate')}}" method="post">
             @csrf
             <div class="col-md-6 offset-md-3 row">
-                <div class="col-md-6">
-                    <label for="usuario">Usuario</label>
-                    <input class="form-control" type="text" name="usuario">
-                </div>
-                <div class="col-md-6">
-                    <label for="contrasena">Contaseña</label>
-                    <input class="form-control" type="password" name="contrasena">
-                </div>
+                <x-inputdl columna="6" nombre='usuario' texto='Usuario' type='text' />
+                <x-inputdl columna="6" nombre='contrasena' texto='Contaseña' type='password' />
                 <button class="w-100 mt-5 btn btn-primary" type="submit">Ingresar</button>
             </div>
             
