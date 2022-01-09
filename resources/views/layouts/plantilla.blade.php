@@ -27,6 +27,9 @@
             }
         </style>
     </head>
+    
+    @include('layouts.barranav')
+
     <body class="bg-secondary">
         <div class="container">
             @yield('contenido')

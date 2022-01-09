@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('inicio.home');
 
 Route::get('productos/', [ProductosController::class, 'index'])->name('u_prod.index');
 
@@ -26,3 +26,5 @@ Route::post('productos/alta', [ProductosController::class, 'create'])->name('u_p
 Route::get('productos/delete/{id_del}', [ProductosController::class, 'fn_delete'])->name('u_prod.fn_delete');
 
 Route::put('productos/update', [ProductosController::class, 'update'])->name('u_prod.update');
+
+Route::view('contacto', 'contacto')->name('contacto');
